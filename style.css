@@ -36,7 +36,7 @@ body {
     width: 60px;
 }
 
-.navbar a {
+.navbar a {/*Botones*/
     display: block;
     padding: 10px 10px;
     color: #fff;
@@ -68,7 +68,7 @@ body {
     font-weight: 300;
     font-style: italic;
     text-transform: uppercase;
-    color: #154360;
+    color: #CA6F1E;
 }
 
 .titulo {
@@ -81,7 +81,7 @@ body {
 
 p {
     margin-bottom: 40px;
-    font-size: 18px;
+    font-size: 25px;
     color: #fff;
     padding: 0 150px;
 }
@@ -116,9 +116,9 @@ p {
 }
 
 .box-container {
-    display: flex;
+    display: flex;/*Necesario para que las cajas queden una alado de la otra*/
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap;/*Tambien necesario*/
 }
 
 .box-container .box {
@@ -136,19 +136,19 @@ p {
     transform: translateY(-3%);
 }
 
-.box-container .box img {
+.box-container .box img {/*Para modificar IMG de las carreras dentro de las cajas*/
     height: 75%;
     width: 90%;
     border-radius: 80px 20px;
     margin-top: 5%;
 }
 
-.box-container .box h3 {
+.box-container .box h3 {/*Texto h3 de la carreras dentro de las cajas*/
     font-size: 20px;
     color: #CA6F1E;
 }
 
-.box-container .box p {
+.box-container .box p {/*Texto p de la carreras dentro de las cajas*/
     padding: 0 15px;
     font-size: 16px;
 }
@@ -163,7 +163,7 @@ p {
 .profes {
     background: url(img/profes.jpg) no-repeat center;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed;/*Efecto foto fija en el fondo*/
     text-align: center;
 }
 
@@ -217,11 +217,6 @@ p {
     padding: 0;
 }
 
-.contacto {
-    background: url(img/contactos.jpg) no-repeat center;
-    background-size: 100% 100%;
-}
-
 .footer {
     padding: 5px 0;
     background: black;
@@ -245,4 +240,92 @@ p {
 
 
 
+    /*CONTACTO*/
+
+.contacto {
+    width: 100%;
+    height: 800px;
+    background-color: #17202A;
+    display: flex;
+    text-align: left;
+    flex-wrap: wrap;
+    color: #CA6F1E;
+    align-items: center;    
+}
+
+.cont1 {
+    width: 50%;
+    height: 90%;
+}
+
+form {
+    margin: 40px;
+}
+
+form label , form legend {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padron {
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+    background-color: #fff;
+}
+
+.input-padron {
+    border: 2px #CA6F1E solid;
+}
+
+.input-padron:hover {
+    border: 3px #CA6F1E solid ;
+}
+
+.enviar {
+    margin-top: 2%;
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: #CA6F1E;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.enviar:hover {
+    background: #154360;
+    transform: scale(1.1);
+}
+
+.cont2 {
+    width: 48%;
+    height: 80%;
+    border: none;
+    background: url(img/bandera.jpg);
+    background-size: cover;
+}
+.cont2 img {/*Imagen contacto*/
+    width: 35%;
+    height: 35%;
+    position: relative;
+    border-radius: 13em/3em;
+    animation-name: muevete ; /*Asignamos el nombre*/
+    animation-duration:8s ; /*Indica la duracion total en segundos*/
+    animation-iteration-count: infinite;/*La cantidad de veces q se repita(1,2,3) o infinite*/
+    animation-direction: alternate;/*Para evitar el corte en la animacion */
+}
+
+@keyframes muevete{/*@keyframes:para iniciar animacion ejemplo:nombre de variable (poner -webkit- entre @ y keyframes si el navegador no lo soporta) */
+    0% {background: #aaa;left:0;top:0px; }
+    25% {background: red;left:425px;top:0px; }
+    50% {background: green;left:425px;top:416px; }
+    75% {background: pink;left:0 ;top:416px; }
+    100% {background: blue;left:0;top:0px; }
+}
 

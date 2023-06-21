@@ -32,14 +32,16 @@
                “La cultura se adquiere leyendo libros; pero el conocimiento del mundo, que es mucho más necesario, sólo se alcanza leyendo a los hombres y estudiando las diversas ediciones que de ellos existen”. Lord Chesterfield.
        </p>
         <figure>
-            <img src="img/mapa.png" height="220px" width="100%" alt="mapa">
+            <div class="mapa-contenido">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235.8962943893744!2d-65.2000160934792!3d-26.82481430814738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c19a1a62463%3A0xe233364f66ebd16!2sEscuela%20Primaria%20Jos%C3%A9%20Marmol!5e0!3m2!1ses!2sar!4v1687136168654!5m2!1ses!2sar" width="400" height="250" style="border:20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </figure><p>Ubicación</p>   
     </header>
 
 
    <section class="content carrera" >
        <h2 class="titulo" id="carreras">Carreras</h2>
-       <p>50 años de Trayectoria avalan nuestra Institución. </p><p>Piensa en ti , en el futuro y elige tu carrera. </p>
+       <p>54 años de Trayectoria avalan nuestra Institución. </p><p>Piensa en ti , en el futuro y elige tu carrera. </p>
 
         <div class="box-container">
 
@@ -69,7 +71,7 @@
             <p>"Es cortés y muy galante, educado por demás
             En su escala de valores lo primero es estudiar
             Muy correcto en sus modales, moderado al criticar
-            Nunca se copia de nadie y a nadie deja copiar" Los Twist.
+            Nunca se copia de nadie y a nadie deja copiar.Es el estudiante , estudiante de verdad es el estudiante el ejemplo universal" Los Twist.
             </p>
             
         </article>
@@ -88,8 +90,8 @@
 
             <div class="box">
                 <img src="img/Torres.jpg" alt="">
-                <h3>Torres Miguel Angel</h3>
-                <p>El 8 de Agosto de 1969 el presidente del consejo de educacion Prof. M.A.Torres designo el nombre de ALFREDO COVIELLO</p>
+                <h3>Marcelo Boullhesen</h3>
+                <p>Lic. en Informática, Docente de Informatica y Nuevas Tecnologías. Actual director del IES Covielcho</p>
             </div>
 
             <div class="box">
@@ -107,9 +109,40 @@
         </article>
    </section>
 
-    <section class="content contacto" id="contacto" >
-       <h2 class="titulo" ></h2>
-       <p></p>
+    <section class="contacto" id="contacto" >
+            <div class="cont1">
+                <form>
+                    <label for="nombreapellido">Nombre y Apellido</label>
+                    <input type="text" id="nombreapellido" class="input-padron" required>
+
+                    <label for="nombreapellido">Correo Electronico</label>
+                    <input type="email" id="correoelectronico" class="input-padron" required placeholder="email@dominio.com">
+
+                    <label for="telefono">Telefóno</label>
+                    <input type="tel" id="telefono" class="input-padron" required placeholder="(XX) XXXX XXXX">
+
+                    <label for="mensaje">Mensaje</label>
+                    <textarea cols="63" rows="10" id="mensaje" class="input-padron" required></textarea>
+
+                    <fieldset>
+                        <legend>¿Forma de contacto?</legend>
+
+                        <label for="radio-mail">
+                            <input type="radio" name="contacto" value="mail" id="radio-mail"> E-mail
+                        </label>
+                        <label for="radio-telefono">
+                            <input type="radio" name="contacto" value="telefono" id="radio-telefono"> Telefóno
+                        </label>
+                        <label for="radio-whatsapp">
+                            <input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp"> WhatsApp
+                        </label>
+                    </fieldset>
+                    <input class="enviar" type="submit" value="Enviar">
+                </form>
+            </div>
+            <div class="cont2">
+                <div class="img"><a href="http://institutoalfredocoviello.blogspot.com/" target="_blank"><img src="img/logoCoviel.png"></a></div>
+            </div>
    </section>
 
 
