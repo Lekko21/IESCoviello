@@ -15,12 +15,24 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 63px;
-    background: #171717;
+    background: black;
     position: fixed;
     width: 100%;
     z-index: 100;
+    animation-name: cabeColor;/*Asignamos el nombre*/
+    animation-duration: 5s;/*Indica la duracion total en segundos*/
+    animation-iteration-count: infinite;/*Cantidad de veces que se repita 1,2,3,infinitas*/
+    animation-direction: reverse;
+    animation-delay: 1s;
 }
 
+@keyframes cabeColor {
+    0% {background: black;}
+    25% {background: #17202A}
+    50% {background: #154360}
+    75% {background: #17202A}
+    100% {background: black;}
+}
 .navbar {
     display: flex;
     margin-right: 10px;
@@ -54,6 +66,7 @@ body {
 
 .header {
     display: flex;
+    padding: 0%;
     justify-content: center;
     align-items: center;
     min-height: 90vh;/*Para cuadrar toda la pantalla del div.*/
@@ -63,7 +76,6 @@ body {
 }
 
 .subtitulo {
-    margin-bottom: 10px;
     font-size: 30px;
     font-weight: 300;
     font-style: italic;
@@ -104,6 +116,7 @@ p {
 .content {
     height: 100vh;
     min-height: 100vh;
+    max-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -166,22 +179,29 @@ p {
     background-attachment: fixed;/*Efecto foto fija en el fondo*/
     text-align: center;
 }
-
+/*Institucion*/
 .about {
     background: #303030;
-    padding: 50px 0;
+    padding: 15px 0;
+}
+
+.about p {
+    column-width: 300px;
+    column-gap: 25px;
+    column-rule: 1px #cccccc solid;
+    text-align: left;
 }
 
 .box-container2{
     display: flex;
     justify-content: center;
-    padding-top: 50px;
+    padding-top: 10px;
     flex-wrap: wrap;
 }
 
 .box-container2 .box {
     width: 350px;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     border-radius: 60px/20px;
     text-align: center;
     box-shadow: 0 5px 5px rgba(0, 0, 0, .3);
@@ -190,18 +210,29 @@ p {
 }
 
 .box-container2 .box img {
+    background: url(img/dire.jpg)no-repeat center;
     height: 70px;
     width: 70px;
-    object-fit: cover;
+    background-size: contain;
     border-radius: 50%;
     margin-top: -50px;
     border: 6px solid #CA6F1E;
+}
+
+.box-container2 .box img:hover{/*Imagen del dir se agrande*/
+    background-size: contain;
+    transform: scale(3);
+    border: 3px solid #154360;
 }
 
 .box .video {
     margin-top: 5%;
     width: 90%;
     height: 90%;
+}
+
+.box .video:hover{
+    transform: scale(1.7);
 }
 
 .box-container2 .box h3 {
@@ -217,25 +248,55 @@ p {
     padding: 0;
 }
 
+  /*El footer*/
+
 .footer {
-    padding: 5px 0;
-    background: black;
-    color: white;
-    align-content: center;
-    justify-content: center;
-}
-
-
-.footer-section{
-    display: flex;
-    align-items: center;
-}
-
-#social-network {
+  background: black;
   display: flex;
-  width: 300px;
-  margin: top 1em; 
+  justify-content: center;
   align-items: center;
+}
+
+
+.footer-content{
+  display: flex;
+  justify-content: space-around;
+  padding: 3%;
+  align-items: space-around;
+  text-align: center;
+  color: white;
+
+}
+
+.social-network a {
+  text-decoration: none;
+  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background: #314652;
+  color: #f1f1f1;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+  transition: all .4s ease-in-out;
+  animation-name: botonAnima;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+}
+
+@keyframes botonAnima {
+  0% {color: white}
+  20% {color: orange;}
+  40% {color: blue;}
+  60% {color: pink }
+  80% {color: red;}
+  100% {color: white;}
+}
+
+.social-network a:hover {
+  transform: scale(1.2);
 }
 
 
